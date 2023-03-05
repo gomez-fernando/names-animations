@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-christian.css">
+  <title>Mi nombre</title>
+</head>
+<body>
+  <h1 data-text="Mi_nombre_es...">Mi_nombre_es...</h1>
+  <h2 data-text="David..." class="ocultar">David...</h2>
+
+  <button class="boton" id="boton1" onclick="mostrarNombre()">?</button>
+
+  <h3 data-text="Tengo_20_años" class="ocultar">Tengo_20_años</h3>
+
+  <button class="boton boton2 ocultar" id="boton2" onclick="mostrarEdad()">Y tengo...</button>
+
+
+  <script>
+    const h2 = document.querySelector('h2');
+    const h3 = document.querySelector('h3');
+    const boton1 = document.querySelector('#boton1');
+    const boton2 = document.querySelector('#boton2');
+    console.log(h2)
+    function mostrarNombre() {
+      h2.classList.remove("ocultar")
+      boton1.classList.add("ocultar")
+      boton2.classList.remove("ocultar")
+    }
+    function mostrarEdad() {
+      h3.classList.remove("ocultar")
+      boton2.classList.add("ocultar")
+    }
+  </script>
+</body>
+</html>
